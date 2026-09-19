@@ -1,16 +1,86 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>About | EmotionBot</title><link rel="stylesheet" href="css/style.css"></head>
-<body>
-<header class="navbar"><a class="logo" href="index.html"><span>◈</span> Emotion<span>Bot</span></a><button class="menu-btn">☰</button><nav><a href="index.html">Home</a><a class="active" href="about.html">About</a><a href="how-it-works.html">How It Works</a>
-<a href="technology.html">Technology</a><a href="applications.html">Applications</a><a href="ethics.html">Ethics</a><a href="future.html">Future</a><a href="team.html">Team</a></nav><button id="themeToggle" class="icon-btn">☼</button></header>
-<main><section class="page-hero"><span class="eyebrow">01 • ABOUT THE PROJECT</span><h1>What is the <span>Emotion-Recognizing Robot?</span></h1><p>An AI-based system that analyzes visible facial expressions and estimates a person's emotional state.</p></section>
-<section class="section"><div class="two-col"><div class="illustration-panel reveal"><div class="face-large">◡</div><div class="face-label">FACIAL EXPRESSION</div></div><div class="content reveal"><span class="eyebrow">IN SIMPLE WORDS</span><h2>A robot that can <span>notice patterns</span></h2><p>The Emotion-Recognizing Robot is an AI-based system that analyzes facial expressions using a camera and computer vision. It processes facial features and predicts the person's emotional state.</p><p>The important distinction is that the robot does <strong>not</strong> read minds. It makes an estimate based on observable signals, and that estimate can be wrong.</p><div class="mini-stats"><div><b>6</b><small>Example emotions</small></div><div><b>4</b><small>Core stages</small></div><div><b>1</b><small>Interactive concept</small></div></div></div></div></section>
-<section class="section tinted"><div class="section-heading"><span class="eyebrow">EMOTION SET</span><h2>Six example <span>categories</span></h2></div><div class="emotion-grid">
-<div class="emotion-card happy"><i>😊</i><h3>Happy</h3><p>Positive expression patterns</p></div><div class="emotion-card sad"><i>😢</i><h3>Sad</h3><p>Low-energy expression patterns</p></div><div class="emotion-card angry"><i>😠</i><h3>Angry</h3><p>Tense expression patterns</p></div><div class="emotion-card fear"><i>😨</i><h3>Fear</h3><p>Alert expression patterns</p></div><div class="emotion-card surprise"><i>😲</i><h3>Surprise</h3><p>Unexpected-expression patterns</p></div><div class="emotion-card neutral"><i>😐</i><h3>Neutral</h3><p>Little visible expression</p></div>
-</div></section></main>
-<footer><div><a class="logo" href="index.html"><span>◈</span> Emotion<span>Bot</span></a><p>Emotion recognition, explained responsibly.</p></div><p>© 2026 Emotion-Recognizing Robot</p></footer><button id="topBtn" class="top-btn">↑</button><script src="js/script.js"></script>
-<footer class="creator-footer">
-    Made by <strong>Naman Tripathi</strong>
-</footer>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about the Emotion-Recognizing Robot and its responsible use of facial-expression analysis.">
+  <title>About | EmotionBot</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="about-page">
+  <header class="navbar">
+    <a class="logo" href="index.html" aria-label="EmotionBot home"><span>◈</span> Emotion<span>Bot</span></a>
+    <button class="menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html" aria-current="page">About</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="technology.html">Technology</a>
+      <a href="applications.html">Applications</a>
+      <a href="ethics.html">Ethics</a>
+      <a href="future.html">Future</a>
+      <a href="team.html">Team</a>
+    </nav>
+    <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle colour theme">☼</button>
+  </header>
 
-</body></html>
+  <main>
+    <section class="page-hero">
+      <span class="eyebrow">01 • ABOUT THE PROJECT</span>
+      <h1>What is the <span>Emotion-Recognizing Robot?</span></h1>
+      <p>An AI-based system that analyzes visible facial expressions and estimates a person's emotional state.</p>
+      <div class="about-hero-badges" aria-label="Project highlights">
+        <span>Camera vision</span><span>AI patterns</span><span>Human-centred design</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="two-col">
+        <div class="illustration-panel reveal" aria-hidden="true">
+          <div class="face-large">◡</div>
+          <div class="face-label">FACIAL EXPRESSION</div>
+        </div>
+        <div class="content reveal">
+          <span class="eyebrow">IN SIMPLE WORDS</span>
+          <h2>A robot that can <span>notice patterns</span></h2>
+          <p>The Emotion-Recognizing Robot is an AI-based system that analyzes facial expressions using a camera and computer vision. It processes facial features and predicts the person's emotional state.</p>
+          <p>The important distinction is that the robot does <strong>not</strong> read minds. It makes an estimate based on observable signals, and that estimate can be wrong.</p>
+          <div class="mini-stats">
+            <div><b>6</b><small>Example emotions</small></div>
+            <div><b>4</b><small>Core stages</small></div>
+            <div><b>1</b><small>Interactive concept</small></div>
+          </div>
+          <aside class="about-note"><strong>Important:</strong> An expression is not proof of how someone feels. Results should always be treated as a helpful estimate.</aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tinted">
+      <div class="section-heading">
+        <span class="eyebrow">EMOTION SET</span>
+        <h2>Six example <span>categories</span></h2>
+      </div>
+      <div class="emotion-grid">
+        <article class="emotion-card happy"><i aria-hidden="true">😊</i><h3>Happy</h3><p>Positive expression patterns</p></article>
+        <article class="emotion-card sad"><i aria-hidden="true">😢</i><h3>Sad</h3><p>Low-energy expression patterns</p></article>
+        <article class="emotion-card angry"><i aria-hidden="true">😠</i><h3>Angry</h3><p>Tense expression patterns</p></article>
+        <article class="emotion-card fear"><i aria-hidden="true">😨</i><h3>Fear</h3><p>Alert expression patterns</p></article>
+        <article class="emotion-card surprise"><i aria-hidden="true">😲</i><h3>Surprise</h3><p>Unexpected expression patterns</p></article>
+        <article class="emotion-card neutral"><i aria-hidden="true">😐</i><h3>Neutral</h3><p>Little visible expression</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <a class="logo" href="index.html" aria-label="EmotionBot home"><span>◈</span> Emotion<span>Bot</span></a>
+      <p>Emotion recognition, explained responsibly.</p>
+    </div>
+    <p>© 2026 Emotion-Recognizing Robot</p>
+    <p>Made by <strong>Naman Tripathi</strong></p>
+  </footer>
+
+  <button id="topBtn" class="top-btn" type="button" aria-label="Back to top">↑</button>
+  <script src="js/script.js"></script>
+</body>
+</html>
