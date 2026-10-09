@@ -1,4 +1,257 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Technology | EmotionBot</title><link rel="stylesheet" href="css/style.css"></head><body>
-<header class="navbar"><a class="logo" href="index.html"><span>◈</span> Emotion<span>Bot</span></a><button class="menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="how-it-works.html">How It Works</a><a class="active" aria-current="page" href="technology.html">Technology</a><a href="applications.html">Applications</a><a href="ethics.html">Ethics</a><a href="future.html">Future</a><a href="team.html">Team</a></nav><button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle colour theme">☼</button></header>
-<main><section class="page-hero"><span class="eyebrow">04 • TECHNOLOGY</span><h1>The technology <span>behind the robot.</span></h1><p>A practical stack combining AI, computer vision, software and robotics hardware.</p></section><section class="section"><div class="tech-grid"><article class="tech-card reveal"><b>AI</b><h3>Artificial Intelligence</h3><p>Estimates expression categories from visual patterns.</p></article><article class="tech-card reveal"><b>ML</b><h3>Machine Learning</h3><p>Learns classification patterns from example data.</p></article><article class="tech-card reveal"><b>CV</b><h3>Computer Vision</h3><p>Finds useful information in camera images.</p></article><article class="tech-card reveal"><b>OP</b><h3>OpenCV</h3><p>Handles image processing and camera input.</p></article><article class="tech-card reveal"><b>PY</b><h3>Python</h3><p>A friendly language for AI prototypes.</p></article><article class="tech-card reveal"><b>TF</b><h3>ML Framework</h3><p>Runs or trains a classification model.</p></article></div></section><section class="section tinted"><div class="section-heading"><span class="eyebrow">HARDWARE</span><h2>What could be <span>inside the robot?</span></h2></div><div class="hardware-grid"><div>📷<b>Camera</b><small>Face input</small></div><div>🧠<b>Mini computer</b><small>AI processing</small></div><div>⚙️<b>Controller</b><small>Hardware control</small></div><div>🔩<b>Servo motors</b><small>Robot movement</small></div><div>🔊<b>Speaker</b><small>Voice response</small></div><div>💡<b>Display</b><small>Visual feedback</small></div><div>🔋<b>Power supply</b><small>Energy source</small></div><div>🤖<b>Robot body</b><small>Physical structure</small></div></div></section></main>
-<footer><div><a class="logo" href="index.html"><span>◈</span> Emotion<span>Bot</span></a><p>Emotion-aware robotics, explained responsibly.</p></div><p>© 2026 EmotionBot · Created by <strong>Naman Tripathi</strong></p></footer><button id="topBtn" class="top-btn" type="button" aria-label="Back to top">↑</button><script src="js/script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Technology | EmotionBot</title>
+<meta name="description" content="The practical stack behind an expression-recognising robot: computer vision, a classification model, Python software and the hardware that carries it.">
+<meta name="theme-color" content="#f7f3ea">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="EmotionBot">
+<meta property="og:title" content="Technology | EmotionBot">
+<meta property="og:description" content="Computer vision, machine learning and robotics hardware, explained without jargon.">
+<meta property="og:image" content="favicon.svg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&display=swap">
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/icons.js"></script>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <a class="logo" href="index.html" aria-label="EmotionBot — home">
+      <span class="logo-mark" aria-hidden="true"><svg class="icon"><use href="#i-robot"></use></svg></span>
+      Emotion<b>Bot</b>
+    </a>
+    <nav class="site-nav" id="siteNav" data-nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="technology.html" aria-current="page">Technology</a>
+      <a href="demo.html">Demo</a>
+      <a href="applications.html">Applications</a>
+      <a href="ethics.html">Ethics</a>
+      <a href="future.html">Future</a>
+      <a href="team.html">Team</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme" title="Switch to dark theme">
+        <svg class="icon" aria-hidden="true"><use href="#i-moon"></use></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation menu">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <span class="page-hero-decoration" aria-hidden="true">04</span>
+    <div class="page-hero-inner">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        <span>Technology</span>
+      </nav>
+      <h1>The technology behind <em>the robot.</em></h1>
+      <p class="lede">A practical stack that combines computer vision, a classification model, Python software and a small amount of robotics hardware.</p>
+      <div class="hero-badges">
+        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-brain"></use></svg>AI and machine learning</span>
+        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg>Computer vision</span>
+        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-cpu"></use></svg>Microcontroller</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading reveal">
+      <span class="eyebrow">Software</span>
+      <h2>Six pieces of the <em>software stack</em></h2>
+      <p>Each piece has one job. Keeping them separate is what makes the system possible to explain — and possible to fix when it goes wrong.</p>
+    </div>
+    <div class="grid cols-3">
+      <article class="card reveal">
+        <span class="num">AI</span>
+        <h3>Artificial intelligence</h3>
+        <p>The overall approach: build a system that can make a useful judgement from messy, real-world input.</p>
+      </article>
+      <article class="card reveal">
+        <span class="num">ML</span>
+        <h3>Machine learning</h3>
+        <p>Instead of hand-written rules, the model learns which patterns tend to occur together in labelled examples.</p>
+      </article>
+      <article class="card reveal">
+        <span class="num">CV</span>
+        <h3>Computer vision</h3>
+        <p>Turns a grid of pixel values into meaningful structures — edges, shapes, a face, then facial features.</p>
+      </article>
+      <article class="card reveal">
+        <span class="num">LIB</span>
+        <h3>Vision library</h3>
+        <p>A library such as OpenCV handles camera capture, colour conversion and feature detection reliably.</p>
+      </article>
+      <article class="card reveal">
+        <span class="num">PY</span>
+        <h3>Python</h3>
+        <p>A readable language with strong AI tooling, which makes the project easy for a class to inspect and change.</p>
+      </article>
+      <article class="card reveal">
+        <span class="num">NN</span>
+        <h3>Neural network</h3>
+        <p>A small convolutional network outputs one score per expression category, and the highest score wins.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section tinted">
+    <div class="section-heading center reveal">
+      <span class="eyebrow">Hardware</span>
+      <h2>What could be <em>inside the robot?</em></h2>
+      <p>A believable concept does not need an expensive robot — it needs parts that genuinely do each job.</p>
+    </div>
+    <div class="grid cols-4">
+      <article class="card center reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-camera"></use></svg></span>
+        <h3>Camera</h3>
+        <p>Supplies the frames the system analyses.</p>
+      </article>
+      <article class="card center reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-cpu"></use></svg></span>
+        <h3>Mini computer</h3>
+        <p>Runs the model where the robot stands.</p>
+      </article>
+      <article class="card center reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-motor"></use></svg></span>
+        <h3>Servo motors</h3>
+        <p>Turn a head, wave an arm, nod gently.</p>
+      </article>
+      <article class="card center reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-speaker"></use></svg></span>
+        <h3>Speaker</h3>
+        <p>Speaks the robot's considerate reply.</p>
+      </article>
+      <article class="card center reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-display"></use></svg></span>
+        <h3>Display</h3>
+        <p>Shows the estimate and the confidence score.</p>
+      </article>
+      <article class="card center reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-battery"></use></svg></span>
+        <h3>Power supply</h3>
+        <p>Keeps the display running during a demo.</p>
+      </article>
+      <article class="card center reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-brain"></use></svg></span>
+        <h3>Accelerator</h3>
+        <p>Optional chip that speeds up inference.</p>
+      </article>
+      <article class="card center reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-robot"></use></svg></span>
+        <h3>Robot body</h3>
+        <p>Gives the whole system a friendly shape.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="two-col">
+      <div class="content reveal">
+        <span class="eyebrow">How it learns</span>
+        <h2>Taught by <em>examples</em>, not by rules</h2>
+        <p>A convolutional network starts with random weights. It is shown thousands of labelled images, guesses the label, measures how wrong it was, and nudges the weights slightly in the direction that reduces the error.</p>
+        <p>Repeat that millions of times and the network becomes good at the task it was trained for. But it also inherits every bias in the data — which is why the ethics page of this project matters as much as the technology page.</p>
+        <a class="btn" href="ethics.html">Read the principles <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+      </div>
+      <div class="grid cols-2 reveal">
+        <article class="card">
+          <span class="num">01</span>
+          <h3>Collect</h3>
+          <p>Gather labelled example images, with consent.</p>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <h3>Train</h3>
+          <p>Adjust weights to reduce prediction error.</p>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <h3>Test</h3>
+          <p>Check accuracy across different people and lighting.</p>
+        </article>
+        <article class="card">
+          <span class="num">04</span>
+          <h3>Deploy</h3>
+          <p>Run inference locally, on the robot itself.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="callout reveal">
+      <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+      <p><b>Prototype notes.</b> Facial images are sensitive personal data. In this concept every frame is processed in memory and never uploaded or stored, and no API keys belong in browser JavaScript — those stay on the device or a server you control.</p>
+    </div>
+  </section>
+
+  <nav class="pager" aria-label="Page navigation">
+    <a href="how-it-works.html">
+      <span>Previous</span>
+      <b>How it works</b>
+    </a>
+    <a class="next" href="demo.html">
+      <span>Next</span>
+      <b class="row">Try the demo<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></b>
+    </a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true"><svg class="icon"><use href="#i-robot"></use></svg></span>
+        Emotion<b>Bot</b>
+      </a>
+      <p>Emotion-aware robotics, explained responsibly. A school exhibition project about what expression recognition can and cannot tell us.</p>
+    </div>
+    <div class="footer-col">
+      <h2>Project</h2>
+      <a href="about.html">About</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="technology.html">Technology</a>
+      <a href="demo.html">Try the demo</a>
+    </div>
+    <div class="footer-col">
+      <h2>Responsibility</h2>
+      <a href="ethics.html">Ethics and privacy</a>
+      <a href="applications.html">Applications</a>
+      <a href="future.html">Future</a>
+      <a href="team.html">Team</a>
+    </div>
+    <div class="footer-col">
+      <h2>Project team</h2>
+      <address>Built by Naman Tripathi, Kushagra Gupta and Devansh Yadav.</address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span data-year>2026</span> EmotionBot</p>
+    <p>Simulated concept — not a real emotion detector.</p>
+    <p>Website made by Naman Tripathi</p>
+  </div>
+</footer>
+
+<button id="topBtn" class="top-btn" type="button" aria-label="Back to top">
+  <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,79 +1,195 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="no-js">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Project Team | EmotionBot</title>
-	<link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team | EmotionBot</title>
+<meta name="description" content="The three students behind the EmotionBot exhibition project: project lead, robotics and hardware, and AI and computer vision.">
+<meta name="theme-color" content="#f7f3ea">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="EmotionBot">
+<meta property="og:title" content="Team | EmotionBot">
+<meta property="og:description" content="Three students, one classroom project, and a deliberately honest set of claims.">
+<meta property="og:image" content="favicon.svg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&display=swap">
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header class="navbar">
-		<a class="logo" href="index.html"><span>&#9672;</span> Emotion<span>Bot</span></a>
-		<button class="menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
-		<nav aria-label="Main navigation">
-			<a href="index.html">Home</a>
-			<a href="about.html">About</a>
-			<a href="how-it-works.html">How It Works</a>
-			<a href="technology.html">Technology</a>
-			<a href="applications.html">Applications</a>
-			<a href="ethics.html">Ethics</a>
-			<a href="future.html">Future</a>
-			<a class="active" aria-current="page" href="team.html">Team</a>
-		</nav>
-		<button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle colour theme">&#9788;</button>
-	</header>
+<script src="js/icons.js"></script>
+<a class="skip-link" href="#main">Skip to content</a>
 
-	<main>
-		<section class="page-hero">
-			<span class="eyebrow">08 &bull; PROJECT TEAM</span>
-			<h1>The people behind <span>the project.</span></h1>
-			<p>A school exhibition project made with curiosity, care and a love of robotics.</p>
-		</section>
+<header class="navbar">
+  <div class="navbar-inner">
+    <a class="logo" href="index.html" aria-label="EmotionBot — home">
+      <span class="logo-mark" aria-hidden="true"><svg class="icon"><use href="#i-robot"></use></svg></span>
+      Emotion<b>Bot</b>
+    </a>
+    <nav class="site-nav" id="siteNav" data-nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="technology.html">Technology</a>
+      <a href="demo.html">Demo</a>
+      <a href="applications.html">Applications</a>
+      <a href="ethics.html">Ethics</a>
+      <a href="future.html">Future</a>
+      <a href="team.html" aria-current="page">Team</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme" title="Switch to dark theme">
+        <svg class="icon" aria-hidden="true"><use href="#i-moon"></use></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation menu">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
 
-		<section class="section">
-			<div class="team-grid">
-				<article class="team-card reveal">
-					<div class="avatar">&#128104;&#8205;&#128187;</div>
-					<h3>Naman Tripathi</h3>
-					<p>Project Lead &amp; Developer</p>
-					<span>EmotionBot</span>
-				</article>
-				<article class="team-card reveal">
-					<div class="avatar">&#129302;</div>
-					<h3>Kushagra Gupta</h3>
-					<p>Robotics &amp; Hardware Engineer</p>
-					<span>EmotionBot</span>
-				</article>
-				<article class="team-card reveal">
-					<div class="avatar">&#129489;&#8205;&#128187;</div>
-					<h3>Devansh Yadav</h3>
-					<p>AI &amp; Computer Vision Engineer</p>
-					<span>EmotionBot</span>
-				</article>
-			</div>
-		</section>
+<main id="main">
+  <section class="page-hero">
+    <span class="page-hero-decoration" aria-hidden="true">08</span>
+    <div class="page-hero-inner">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        <span>Team</span>
+      </nav>
+      <h1>The people behind <em>the project.</em></h1>
+      <p class="lede">A school exhibition project made with curiosity, care, and a rule that we would not claim anything we could not demonstrate.</p>
+    </div>
+  </section>
 
-		<section class="section tinted">
-			<div class="cta compact">
-				<div>
-					<span class="eyebrow">READY TO PRESENT?</span>
-					<h2>Show how <span>AI meets robotics.</span></h2>
-					<p>Explore the project, ask questions and imagine what comes next.</p>
-				</div>
-				<a class="btn primary" href="about.html">Explore the project &#8594;</a>
-			</div>
-		</section>
-	</main>
+  <section class="section">
+    <div class="grid cols-3">
+      <article class="card team-card center reveal">
+        <span class="avatar" aria-hidden="true">NT</span>
+        <h3>Naman Tripathi</h3>
+        <p class="role">Project lead and developer</p>
+        <p>Defined the concept, researched how expression recognition actually works, and built and maintained this website.</p>
+      </article>
+      <article class="card team-card center reveal">
+        <span class="avatar" aria-hidden="true">KG</span>
+        <h3>Kushagra Gupta</h3>
+        <p class="role">Robotics and hardware</p>
+        <p>Worked out what the physical robot would need — camera, computing, motors and power — and how it would be assembled.</p>
+      </article>
+      <article class="card team-card center reveal">
+        <span class="avatar" aria-hidden="true">DY</span>
+        <h3>Devansh Yadav</h3>
+        <p class="role">AI and computer vision</p>
+        <p>Investigated face detection, feature extraction and classification, and documented the model's real limitations.</p>
+      </article>
+    </div>
+  </section>
 
-	<footer>
-		<div>
-			<a class="logo" href="index.html"><span>&#9672;</span> Emotion<span>Bot</span></a>
-			<p>Emotion-aware robotics, explained responsibly.</p>
-		</div>
-		<p>&copy; 2026 EmotionBot &middot; Created by <strong>Naman Tripathi</strong></p>
-	</footer>
+  <section class="section tinted">
+    <div class="section-heading center reveal">
+      <span class="eyebrow">How it was made</span>
+      <h2>Three rules we <em>worked to</em></h2>
+    </div>
+    <div class="grid -3">
+      <article class="card reveal">
+        <span class="card-icon" aria-hidden="true"><svg class="icon"><use href="#i-brain"></use></svg></span>
+        <h3>Research before claiming</h3>
+        <p>Every statement about accuracy, bias or privacy on this site had to be something we could explain out loud to a judge.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card-icon" aria-hidden="true"><scolsvg class="icon"><use href="#i-users"></use></scolsvg></span>
+        <h3>Design for real visitors</h3>
+        <p>The site works on a phone in a crowded hall, with readable text, keyboard navigation and a dark mode for a dark room.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card-icon" aria-hidden="true"><svg class="icon"><use href="#i-shield"></use></svg></span>
+        <h3>Say what it cannot do</h3>
+        <p>The limitations are on the front page on purpose. A project that only shows its strengths is not teaching anything honest.</p>
+      </article>
+    </div>
+  </section>
 
-	<button id="topBtn" class="top-btn" type="button" aria-label="Back to top">&#8593;</button>
-	<script src="js/script.js"></script>
+  <section class="section">
+    <div class="two-col">
+      <div class="content reveal">
+        <span class="eyebrow">Project facts</span>
+        <h2>What this website <em>actually is</em></h2>
+        <p>A static multi-page site, built with plain HTML, CSS and JavaScript — no framework, no tracking, no analytics, and no camera access anywhere on the site. It opens straight from a folder or any static host.</p>
+        <dl class="mini-stats">
+          <div><dt>Pages</dt><dd><b>9</b></dd></div>
+          <div><dt>Team members</dt><dd><b>3</b></dd></div>
+          <div><dt>External trackers</dt><dd><b>0</b></dd></div>
+        </dl>
+      </div>
+      <div class="figure-panel reveal" aria-hidden="true">
+        <span class="corner-tag">Exhibition build</span>
+        <svg class="icon"><use href="#i-robot"></use></svg>
+        <span class="figure-label">Built to be explained by hand</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="callout reveal">
+      <svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg>
+      <p><b>Thanks for reading this far.</b> If you are visiting the exhibition in person, ask us where the estimate is most likely to be wrong — that is our favourite question.</p>
+    </div>
+  </section>
+
+  <nav class="pager" aria-label="Page navigation">
+    <a href="future.html">
+      <span>Previous</span>
+      <b>Future</b>
+    </a>
+    <a class="next" href="index.html">
+      <span>Back to the start</span>
+      <b class="row">Home<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></b>
+    </a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true"><svg class="icon"><use href="#i-robot"></use></svg></span>
+        Emotion<b>Bot</b>
+      </a>
+      <p>Emotion-aware robotics, explained responsibly. A school exhibition project about what expression recognition can and cannot tell us.</p>
+    </div>
+    <div class="footer-col">
+      <h2>Project</h2>
+      <a href="about.html">About</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="technology.html">Technology</a>
+      <a href="demo.html">Try the demo</a>
+    </div>
+    <div class="footer-col">
+      <h2>Responsibility</h2>
+      <a href="ethics.html">Ethics and privacy</a>
+      <a href="applications.html">Applications</a>
+      <a href="future.html">Future</a>
+      <a href="team.html">Team</a>
+    </div>
+    <div class="footer-col">
+      <h2>Project team</h2>
+      <address>Built by Naman Tripathi, Kushagra Gupta and Devansh Yadav.</address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span data-year>2026</span> EmotionBot</p>
+    <p>Simulated concept — not a real emotion detector.</p>
+    <p>Website made by Naman Tripathi</p>
+  </div>
+</footer>
+
+<button id="topBtn" class="top-btn" type="button" aria-label="Back to top">
+  <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+<script src="js/script.js"></script>
 </body>
 </html>

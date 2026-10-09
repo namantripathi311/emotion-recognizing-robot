@@ -1,89 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="An interactive school exhibition project exploring responsible emotion-aware robotics.">
-  <title>EmotionBot | Emotion-Aware Robotics</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EmotionBot — emotion-aware robotics, explained responsibly</title>
+<meta name="description" content="An interactive school exhibition project exploring how computer vision estimates visible expression patterns — and why that estimate is never proof of how someone feels.">
+<meta name="theme-color" content="#f7f3ea">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EmotionBot">
+<meta property="og:title" content="EmotionBot — emotion-aware robotics, explained responsibly">
+<meta property="og:description" content="How a robot can notice a visible expression, estimate it carefully, and respond in a considerate way.">
+<meta property="og:image" content="favicon.svg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&display=swap">
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body class="home-page">
-  <div id="loader" aria-live="polite"><div class="loader-robot">🤖</div><p>Starting EmotionBot…</p></div>
-  <header class="navbar">
-    <a class="logo" href="index.html" aria-label="EmotionBot home"><span>◈</span> Emotion<span>Bot</span></a>
-    <button class="menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
-    <nav aria-label="Main navigation">
-      <a class="active" href="index.html" aria-current="page">Home</a>
+<body>
+<script src="js/icons.js"></script>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <a class="logo" href="index.html" aria-label="EmotionBot — home">
+      <span class="logo-mark" aria-hidden="true"><svg class="icon"><use href="#i-robot"></use></svg></span>
+      Emotion<b>Bot</b>
+    </a>
+    <nav class="site-nav" id="siteNav" data-nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
       <a href="about.html">About</a>
       <a href="how-it-works.html">How It Works</a>
       <a href="technology.html">Technology</a>
+      <a href="demo.html">Demo</a>
       <a href="applications.html">Applications</a>
       <a href="ethics.html">Ethics</a>
       <a href="future.html">Future</a>
       <a href="team.html">Team</a>
     </nav>
-    <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle colour theme">☼</button>
-  </header>
+    <div class="nav-actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme" title="Switch to dark theme">
+        <svg class="icon" aria-hidden="true"><use href="#i-moon"></use></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation menu">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-copy reveal">
-        <span class="eyebrow">AI + ROBOTICS EXHIBITION PROJECT</span>
-        <h1>A kinder way for robots to <span>notice us.</span></h1>
-        <p class="hero-subtitle">Emotion-aware interaction, explained responsibly.</p>
-        <p>EmotionBot uses computer vision to identify visible expression patterns and offer a thoughtful response. It estimates—not reads—a person's feelings.</p>
-        <div class="actions">
-          <a class="btn primary" href="about.html">Explore the project <span aria-hidden="true">→</span></a>
-          <a class="btn secondary" href="how-it-works.html">See how it works</a>
+<main id="main">
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">AI + robotics · exhibition project</span>
+      <h1>Can a robot <em>read a face</em> without assuming a mood?</h1>
+      <p class="lede">This project explores how expression recognition works — and why visible cues are not the same as a person's inner state.</p>
+      <p class="hero-note">EmotionBot estimates visible patterns from a face, then responds carefully. It does not claim to know what someone is truly feeling.</p>
+      <div class="actions">
+        <a class="btn primary" href="demo.html">Try the demo <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+        <a class="btn" href="how-it-works.html">See how it works</a>
+      </div>
+      <div class="trust-row">
+        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Visible cues only</span>
+        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Confidence shown</span>
+        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Human in control</span>
+      </div>
+      <dl class="hero-meta">
+        <div><dt>Expression categories</dt><dd><b>6</b></dd></div>
+        <div><dt>Processing stages</dt><dd><b>4</b></dd></div>
+        <div><dt>Images stored</dt><dd><b>0</b></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading reveal">
+      <span class="eyebrow">The big idea</span>
+      <h2>From a visible expression to a <em>cautious response.</em></h2>
+      <p>This project shows how a system can look at facial features, compare them to patterns, and still stop short of claiming certainty about a person's feelings.</p>
+    </div>
+    <div class="flow reveal">
+      <article class="flow-item">
+        <span class="step-no">STEP 01</span>
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-eye"></use></svg></span>
+        <h3>Observe</h3>
+        <p>A face appears in the camera frame.</p>
+      </article>
+      <div class="flow-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-right"></use></svg></div>
+      <article class="flow-item">
+        <span class="step-no">STEP 02</span>
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-scan"></use></svg></span>
+        <h3>Detect</h3>
+        <p>Eyes, brows and mouth are located.</p>
+      </article>
+      <div class="flow-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-right"></use></svg></div>
+      <article class="flow-item">
+        <span class="step-no">STEP 03</span>
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-brain"></use></svg></span>
+        <h3>Estimate</h3>
+        <p>Patterns are compared with examples.</p>
+      </article>
+      <div class="flow-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-right"></use></svg></div>
+      <article class="flow-item">
+        <span class="step-no">STEP 04</span>
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-robot"></use></svg></span>
+        <h3>Respond</h3>
+        <p>The robot offers a careful reply.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section tinted">
+    <div class="section-heading center reveal">
+      <span class="eyebrow">Explore the exhibition</span>
+      <h2>What the system can and <em>cannot</em> know.</h2>
+    </div>
+    <div class="grid cols-3">
+      <a class="card reveal" href="about.html">
+        <span class="num">01 / Concept</span>
+        <h3>About the project</h3>
+        <p>What an expression-recognising robot can do — and what it must never claim to do.</p>
+        <span class="learn">Explore <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+      </a>
+      <a class="card reveal" href="technology.html">
+        <span class="num">02 / Technology</span>
+        <h3>Behind the robot</h3>
+        <p>The camera, computer vision, model and hardware that make the concept possible.</p>
+        <span class="learn">See the stack <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+      </a>
+      <a class="card reveal" href="ethics.html">
+        <span class="num">03 / Responsibility</span>
+        <h3>Ethics and privacy</h3>
+        <p>Why consent, uncertainty and fairness belong at the centre of this project.</p>
+        <span class="learn">Read the principles <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading reveal">
+      <span class="eyebrow">The honest limit</span>
+      <h2>Confidence is not <em>certainty.</em></h2>
+      <p>The model can estimate visible features on a face, but it cannot tell a person's mood, intent, or life story from a still image alone.</p>
+    </div>
+
+    <div class="uncertainty-panel reveal">
+      <div class="signal-card">
+        <span class="signal-label">What the robot can estimate</span>
+        <ul>
+          <li>Face position</li>
+          <li>Eyebrow and mouth shape</li>
+          <li>Visible expression pattern</li>
+        </ul>
+        <div class="confidence-meter" aria-label="94 percent confidence">
+          <span style="width:94%"></span>
         </div>
-        <div class="trust-row"><span>✓ Educational concept</span><span>✓ Privacy-aware</span><span>✓ Human-centred</span></div>
+        <small>Estimated confidence: 94%</small>
       </div>
-      <div class="hero-visual reveal" aria-label="Illustration of a friendly robot analysing a happy expression" role="img">
-        <div class="orb orb1"></div><div class="orb orb2"></div>
-        <div class="robot-card">
-          <span class="robot-tag">LIVE CONCEPT</span>
-          <div class="scan-line"></div>
-          <div class="robot-face"><div class="eye"></div><div class="eye"></div><div class="mouth"></div></div>
-          <div class="robot-status"><span class="pulse"></span> SYSTEM READY</div>
-          <div class="emotion-chip">😊 <span>Visible expression</span><b>94%</b></div>
+
+      <div class="signal-divider" aria-hidden="true">
+        <span>Not the same as</span>
+      </div>
+
+      <div class="signal-card muted">
+        <span class="signal-label">What it cannot know</span>
+        <ul>
+          <li>Inner feelings</li>
+          <li>Life context</li>
+          <li>Intent or cause</li>
+        </ul>
+        <div class="meta-tags" aria-label="Unknowns">
+          <span>Intent</span>
+          <span>Stress</span>
+          <span>Context</span>
+          <span>Truth</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section story-section">
-      <div class="section-heading reveal">
-        <span class="eyebrow">THE BIG IDEA</span>
-        <h2>From a visible expression to a <span>considered response.</span></h2>
-        <p>It is a simple, transparent way to explore how AI and robotics can work alongside people.</p>
+  <section class="section tinted">
+    <div class="section-heading center reveal">
+      <span class="eyebrow">Why it matters</span>
+      <h2>Good systems stay <em>careful.</em></h2>
+    </div>
+    <div class="insight-strip reveal">
+      <article class="insight-card">
+        <span class="num">01</span>
+        <h3>Estimate carefully</h3>
+        <p>Visible expressions are clues, not proofs of a person's inner state.</p>
+      </article>
+      <article class="insight-card">
+        <span class="num">02</span>
+        <h3>Protect privacy</h3>
+        <p>Consent, storage limits and transparency matter as much as the model itself.</p>
+      </article>
+      <article class="insight-card">
+        <span class="num">03</span>
+        <h3>Keep the human in charge</h3>
+        <p>Robots should respond with respect, not certainty or emotional authority.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cta reveal">
+      <div>
+        <span class="eyebrow">Start the tour</span>
+        <h2>See the estimate <em>change in real time.</em></h2>
+        <p>The demo is a simulation with pre-written estimates — but it shows exactly how the interface, the confidence score and the robot's reply fit together.</p>
       </div>
-      <div class="flow reveal">
-        <div class="flow-item"><div class="flow-icon">🙂</div><b>1. Observe</b><small>A face appears on camera</small></div><div class="flow-arrow">→</div>
-        <div class="flow-item"><div class="flow-icon">⌁</div><b>2. Detect</b><small>Features are located</small></div><div class="flow-arrow">→</div>
-        <div class="flow-item"><div class="flow-icon">✦</div><b>3. Estimate</b><small>Patterns are compared</small></div><div class="flow-arrow">→</div>
-        <div class="flow-item"><div class="flow-icon">🤖</div><b>4. Respond</b><small>The robot reacts kindly</small></div>
-      </div>
-    </section>
+      <a class="btn primary" href="demo.html">Open the demo <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+    </div>
+  </section>
+</main>
 
-    <section class="section tinted explore-section">
-      <div class="section-heading reveal"><span class="eyebrow">EXPLORE THE EXHIBITION</span><h2>Big ideas, made <span>easy to explore.</span></h2></div>
-      <div class="card-grid three">
-        <a class="feature-card reveal" href="about.html"><span class="card-number">01 / CONCEPT</span><h3>About the project</h3><p>What an emotion-recognizing robot can—and cannot—do.</p><span class="learn">Explore <span aria-hidden="true">→</span></span></a>
-        <a class="feature-card reveal" href="technology.html"><span class="card-number">02 / TECHNOLOGY</span><h3>Behind the robot</h3><p>Discover the AI, camera, code and hardware that make the concept possible.</p><span class="learn">See the stack <span aria-hidden="true">→</span></span></a>
-        <a class="feature-card reveal" href="ethics.html"><span class="card-number">03 / RESPONSIBILITY</span><h3>Ethics and privacy</h3><p>Why consent, uncertainty and fairness belong at the heart of the project.</p><span class="learn">Read our principles <span aria-hidden="true">→</span></span></a>
-      </div>
-    </section>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true"><svg class="icon"><use href="#i-robot"></use></svg></span>
+        Emotion<b>Bot</b>
+      </a>
+      <p>Emotion-aware robotics, explained responsibly. A school exhibition project about what expression recognition can and cannot tell us.</p>
+    </div>
+    <div class="footer-col">
+      <h2>Project</h2>
+      <a href="about.html">About</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="technology.html">Technology</a>
+      <a href="demo.html">Try the demo</a>
+    </div>
+    <div class="footer-col">
+      <h2>Responsibility</h2>
+      <a href="ethics.html">Ethics and privacy</a>
+      <a href="applications.html">Applications</a>
+      <a href="future.html">Future</a>
+      <a href="team.html">Team</a>
+    </div>
+    <div class="footer-col">
+      <h2>Project team</h2>
+      <address>Built by Naman Tripathi, Kushagra Gupta and Devansh Yadav.</address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span data-year>2026</span> EmotionBot</p>
+    <p>Website made by Naman Tripathi</p>
+  </div>
+</footer>
 
-    <section class="cta reveal">
-      <div><span class="eyebrow">START THE TOUR</span><h2>Curious about the<br><span>technology?</span></h2><p>Follow the complete journey from camera input to robot response.</p></div>
-      <a class="btn primary" href="how-it-works.html">Follow the process <span aria-hidden="true">→</span></a>
-    </section>
-  </main>
-
-  <footer>
-    <div><a class="logo" href="index.html"><span>◈</span> Emotion<span>Bot</span></a><p>Emotion-aware robotics, explained responsibly.</p></div>
-    <p>© 2026 EmotionBot · Created by <strong>Naman Tripathi</strong></p>
-  </footer>
-  <button id="topBtn" class="top-btn" type="button" aria-label="Back to top">↑</button>
-  <script src="js/script.js"></script>
+<button id="topBtn" class="top-btn" type="button" aria-label="Back to top">
+  <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+<script src="js/script.js"></script>
 </body>
 </html>

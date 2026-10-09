@@ -1,4 +1,227 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>How It Works | EmotionBot</title><link rel="stylesheet" href="css/style.css"></head><body>
-<header class="navbar"><a class="logo" href="index.html"><span>◈</span> Emotion<span>Bot</span></a><button class="menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a class="active" aria-current="page" href="how-it-works.html">How It Works</a><a href="technology.html">Technology</a><a href="applications.html">Applications</a><a href="ethics.html">Ethics</a><a href="future.html">Future</a><a href="team.html">Team</a></nav><button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle colour theme">☼</button></header>
-<main><section class="page-hero"><span class="eyebrow">02 • PROCESS</span><h1>How does it <span>work?</span></h1><p>Four simple stages connect computer vision, AI analysis and a possible robot response.</p></section><section class="section"><div class="timeline"><article class="timeline-step reveal"><div class="step-icon">📷</div><div><span>STEP 01</span><h2>Capture</h2><p>The camera captures an image or video frame containing a face.</p></div></article><article class="timeline-step reveal"><div class="step-icon">⌁</div><div><span>STEP 02</span><h2>Detect</h2><p>Computer vision locates the face and important features, including the eyes, eyebrows and mouth.</p></div></article><article class="timeline-step reveal"><div class="step-icon">🧠</div><div><span>STEP 03</span><h2>Analyze</h2><p>An AI model compares visible expression patterns with learned examples.</p></div></article><article class="timeline-step reveal"><div class="step-icon">🤖</div><div><span>STEP 04</span><h2>Respond</h2><p>The robot chooses a considerate response, movement, sound or display.</p></div></article></div></section><section class="section tinted"><div class="section-heading"><span class="eyebrow">SYSTEM FLOW</span><h2>From pixels to a <span>robot response</span></h2></div><div class="system-flow"><span>Camera</span><b>→</b><span>Face detection</span><b>→</b><span>Feature analysis</span><b>→</b><span>Emotion estimate</span><b>→</b><span>Robot</span></div></section></main>
-<footer><div><a class="logo" href="index.html"><span>◈</span> Emotion<span>Bot</span></a><p>Emotion-aware robotics, explained responsibly.</p></div><p>© 2026 EmotionBot · Created by <strong>Naman Tripathi</strong></p></footer><button id="topBtn" class="top-btn" type="button" aria-label="Back to top">↑</button><script src="js/script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it works | EmotionBot</title>
+<meta name="description" content="Four stages — capture, detect, analyse, respond — plus the failure modes that make an expression estimate uncertain.">
+<meta name="theme-color" content="#f7f3ea">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="EmotionBot">
+<meta property="og:title" content="How it works | EmotionBot">
+<meta property="og:description" content="From camera pixels to a considerate robot response, one stage at a time.">
+<meta property="og:image" content="favicon.svg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&display=swap">
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/icons.js"></script>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <a class="logo" href="index.html" aria-label="EmotionBot — home">
+      <span class="logo-mark" aria-hidden="true"><svg class="icon"><use href="#i-robot"></use></svg></span>
+      Emotion<b>Bot</b>
+    </a>
+    <nav class="site-nav" id="siteNav" data-nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="how-it-works.html" aria-current="page">How It Works</a>
+      <a href="technology.html">Technology</a>
+      <a href="demo.html">Demo</a>
+      <a href="applications.html">Applications</a>
+      <a href="ethics.html">Ethics</a>
+      <a href="future.html">Future</a>
+      <a href="team.html">Team</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme" title="Switch to dark theme">
+        <svg class="icon" aria-hidden="true"><use href="#i-moon"></use></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation menu">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <span class="page-hero-decoration" aria-hidden="true">02</span>
+    <div class="page-hero-inner">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        <span>How it works</span>
+      </nav>
+      <h1>How does it <em>work?</em></h1>
+      <p class="lede">Four stages connect computer vision, pattern analysis and a possible robot response. Every stage can also go wrong — so this page covers the failure modes too.</p>
+      <div class="hero-badges">
+        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg>Capture</span>
+        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-scan"></use></svg>Detect</span>
+        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-brain"></use></svg>Analyse</span>
+        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-robot"></use></svg>Respond</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="timeline">
+      <article class="timeline-step reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-camera"></use></svg></span>
+        <div>
+          <span class="step-no">Step 01</span>
+          <h3>Capture</h3>
+          <p>The camera records a frame that contains a face. In a classroom demo the frame is processed and then discarded — nothing is uploaded or kept.</p>
+        </div>
+      </article>
+      <article class="timeline-step reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-scan"></use></svg></span>
+        <div>
+          <span class="step-no">Step 02</span>
+          <h3>Detect</h3>
+          <p>Computer vision locates the face, then finds the features that carry most of the visible signal: the eyes, the eyebrows and the mouth.</p>
+        </div>
+      </article>
+      <article class="timeline-step reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-brain"></use></svg></span>
+        <div>
+          <span class="step-no">Step 03</span>
+          <h3>Analyse</h3>
+          <p>A classification model compares those measurements with patterns it learned from example images. The output is a set of scores — not a fact.</p>
+        </div>
+      </article>
+      <article class="timeline-step reveal">
+        <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="#i-robot"></use></svg></span>
+        <div>
+          <span class="step-no">Step 04</span>
+          <h3>Respond</h3>
+          <p>The robot chooses a deliberately gentle response — a phrase, a light, a movement — and, importantly, allows for the possibility that it is wrong.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section tinted">
+    <div class="section-heading center reveal">
+      <span class="eyebrow">System flow</span>
+      <h2>From pixels to a <em>robot response</em></h2>
+    </div>
+    <div class="system-flow reveal">
+      <span class="node"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg>Camera frame</span>
+      <span class="arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-right"></use></svg></span>
+      <span class="node"><svg class="icon" aria-hidden="true"><use href="#i-scan"></use></svg>Face detection</span>
+      <span class="arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-right"></use></svg></span>
+      <span class="node"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg>Feature analysis</span>
+      <span class="arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-right"></use></svg></span>
+      <span class="node"><svg class="icon" aria-hidden="true"><use href="#i-brain"></use></svg>Expression estimate</span>
+      <span class="arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-right"></use></svg></span>
+      <span class="node"><svg class="icon" aria-hidden="true"><use href="#i-robot"></use></svg>Robot response</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading center reveal">
+      <span class="eyebrow">Where it breaks</span>
+      <h2>Four honest <em>failure modes</em></h2>
+      <p>A project that hides its weak points is not really teaching anything. These are the ones that matter most.</p>
+    </div>
+    <div class="grid cols-4">
+      <article class="card reveal">
+        <span class="card-icon" aria-hidden="true"><svg class="icon"><use href="#i-eye"></use></svg></span>
+        <h3>Lighting</h3>
+        <p>Harsh shadows or a backlit face change the shape the camera sees, so the estimate shifts with the room — not with the person.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card-icon" aria-hidden="true"><svg class="icon"><use href="#i-scan"></use></svg></span>
+        <h3>Partial faces</h3>
+        <p>Glasses, masks, hair or a turned head hide the features the model relies on, which lowers confidence and raises error.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card-icon" aria-hidden="true"><svg class="icon"><use href="#i-users"></use></svg></span>
+        <h3>Cultural difference</h3>
+        <p>Expressions are not universal in the way early datasets assumed. Training sets that under-represent people cause real, measurable unfairness.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card-icon" aria-hidden="true"><svg class="icon"><use href="#i-sparkle"></use></svg></span>
+        <h3>Acting</h3>
+        <p>People can produce a convincing expression without feeling it. A model that only sees the outside cannot tell the difference.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="callout reveal">
+      <svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg>
+      <p><b>Design rule for this project:</b> because stage 03 is only ever an estimate, stage 04 must never make a decision with real consequences. The robot suggests. It does not judge.</p>
+    </div>
+    <div class="cta inside reveal">
+      <div>
+        <span class="eyebrow">See it move</span>
+        <h2>Watch the four stages <em>drive an interface.</em></h2>
+        <p>The demo page turns each stage into a visible panel, so you can see the estimate, the confidence score and the reply change together.</p>
+      </div>
+      <a class="btn primary" href="demo.html">Open the demo <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+    </div>
+  </section>
+
+  <nav class="pager" aria-label="Page navigation">
+    <a href="about.html">
+      <span>Previous</span>
+      <b>About the project</b>
+    </a>
+    <a class="next" href="technology.html">
+      <span>Next</span>
+      <b class="row">Technology<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></b>
+    </a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true"><svg class="icon"><use href="#i-robot"></use></svg></span>
+        Emotion<b>Bot</b>
+      </a>
+      <p>Emotion-aware robotics, explained responsibly. A school exhibition project about what expression recognition can and cannot tell us.</p>
+    </div>
+    <div class="footer-col">
+      <h2>Project</h2>
+      <a href="about.html">About</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="technology.html">Technology</a>
+      <a href="demo.html">Try the demo</a>
+    </div>
+    <div class="footer-col">
+      <h2>Responsibility</h2>
+      <a href="ethics.html">Ethics and privacy</a>
+      <a href="applications.html">Applications</a>
+      <a href="future.html">Future</a>
+      <a href="team.html">Team</a>
+    </div>
+    <div class="footer-col">
+      <h2>Project team</h2>
+      <address>Built by Naman Tripathi, Kushagra Gupta and Devansh Yadav.</address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span data-year>2026</span> EmotionBot</p>
+    <p>Simulated concept — not a real emotion detector.</p>
+    <p>Website made by Naman Tripathi</p>
+  </div>
+</footer>
+
+<button id="topBtn" class="top-btn" type="button" aria-label="Back to top">
+  <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+<script src="js/script.js"></script>
+</body>
+</html>

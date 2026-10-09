@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="EmotionBot">
+  <rect width="64" height="64" rx="14" fill="#a34a33"/>
+  <rect x="5" y="5" width="54" height="54" rx="10" fill="none" stroke="#f0d9c6" stroke-width="1.5" opacity="0.45"/>
+  <path d="M18 38c0 8 6.3 13 14 13s14-5 14-13" fill="none" stroke="#fff6ec" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="24" cy="24" r="4" fill="#fff6ec"/>
+  <circle cx="40" cy="24" r="4" fill="#fff6ec"/>
+</svg>

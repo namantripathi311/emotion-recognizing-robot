@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive demo | EmotionBot</title>
+<meta name="description" content="An interactive, clearly-simulated demo of how an expression estimate, a confidence score and a robot's reply fit together.">
+<meta name="theme-color" content="#f7f3ea">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="EmotionBot">
+<meta property="og:title" content="Interactive demo | EmotionBot">
+<meta property="og:description" content="Choose a visible expression and watch the estimate, the confidence score and the robot's reply change.">
+<meta property="og:image" content="favicon.svg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&display=swap">
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/icons.js"></script>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <a class="logo" href="index.html" aria-label="EmotionBot — home">
+      <span class="logo-mark" aria-hidden="true"><svg class="icon"><use href="#i-robot"></use></svg></span>
+      Emotion<b>Bot</b>
+    </a>
+    <nav class="site-nav" id="siteNav" data-nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="technology.html">Technology</a>
+      <a href="demo.html" aria-current="page">Demo</a>
+      <a href="applications.html">Applications</a>
+      <a href="ethics.html">Ethics</a>
+      <a href="future.html">Future</a>
+      <a href="team.html">Team</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme" title="Switch to dark theme">
+        <svg class="icon" aria-hidden="true"><use href="#i-moon"></use></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation menu">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <span class="page-hero-decoration" aria-hidden="true">03</span>
+    <div class="page-hero-inner">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        <span>Demo</span>
+      </nav>
+      <h1>Try the <em>demo.</em></h1>
+      <p class="lede">Pick a visible expression and watch the estimate, the confidence score and the robot's suggested reply change together. This is a simulation — no camera, no model, no real detection.</p>
+      <div class="hero-badges">
+        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>No camera access</span>
+        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Nothing is uploaded</span>
+        <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Clearly simulated</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="demo-layout" id="demoLayout">
+      <div class="camera-panel">
+        <div class="camera-bar">
+          <span>CAM 01 · SIMULATED INPUT</span>
+          <span class="live"><i aria-hidden="true"></i>ANALYSING</span>
+        </div>
+        <div class="camera-stage" id="demoStage">
+          <div class="face-frame">
+            <span class="corner tl" aria-hidden="true"></span>
+            <span class="corner tr" aria-hidden="true"></span>
+            <span class="corner bl" aria-hidden="true"></span>
+            <span class="corner br" aria-hidden="true"></span>
+            <svg class="face-svg" viewBox="0 0 200 240" aria-hidden="true" focusable="false">
+              <ellipse class="skin" cx="100" cy="120" rx="76" ry="94"/>
+              <circle class="pupil eye" cx="72" cy="104" r="9"/>
+              <circle class="pupil eye" cx="128" cy="104" r="9"/>
+              <path class="feature" id="demoBrowLeft" d="M54 80q18 -9 38 -4"/>
+              <path class="feature" id="demoBrowRight" d="M108 76q20 -5 38 4"/>
+              <path class="feature" id="demoMouth" d="M63 150q37 34 74 0"/>
+            </svg>
+          </div>
+          <span class="scanline" aria-hidden="true"></span>
+        </div>
+        <div class="camera-foot">
+          <span>Frame 128 · 30 fps</span>
+          <code>local only</code>
+        </div>
+      </div>
+
+      <div class="demo-panel">
+        <div class="readout">
+          <span class="icon-tile" aria-hidden="true">
+            <svg class="icon"><use id="readoutIcon" href="#i-face-happy"></use></svg>
+          </span>
+          <div>
+            <span class="readout-label">Expression estimate</span>
+            <strong id="readoutName">Happy</strong>
+          </div>
+        </div>
+
+        <div class="confidence">
+          <div class="confidence-head">
+            <span>Model confidence</span>
+            <b id="confidenceValue">94%</b>
+          </div>
+          <div class="bar" role="img" aria-label="Confidence bar">
+            <i id="confidenceBar" style="width:94%"></i>
+          </div>
+        </div>
+
+        <p class="control-label" id="expressionLabel">Choose a visible expression</p>
+        <div class="expression-grid" role="group" aria-labelledby="expressionLabel">
+          <button class="expression-btn" type="button" data-expression="happy" aria-pressed="true">
+            <svg class="icon" aria-hidden="true"><use href="#i-face-happy"></use></svg>Happy
+          </button>
+          <button class="expression-btn" type="button" data-expression="sad" aria-pressed="false">
+            <svg class="icon" aria-hidden="true"><use href="#i-face-sad"></use></svg>Sad
+          </button>
+          <button class="expression-btn" type="button" data-expression="angry" aria-pressed="false">
+            <svg class="icon" aria-hidden="true"><use href="#i-face-angry"></use></svg>Angry
+          </button>
+          <button class="expression-btn" type="button" data-expression="fear" aria-pressed="false">
+            <svg class="icon" aria-hidden="true"><use href="#i-face-fear"></use></svg>Fear
+          </button>
+          <button class="expression-btn" type="button" data-expression="surprise" aria-pressed="false">
+            <svg class="icon" aria-hidden="true"><use href="#i-face-surprise"></use></svg>Surprise
+          </button>
+          <button class="expression-btn" type="button" data-expression="neutral" aria-pressed="false">
+            <svg class="icon" aria-hidden="true"><use href="#i-face-neutral"></use></svg>Neutral
+          </button>
+        </div>
+
+        <div class="response-box">
+          <span class="icon-tile" aria-hidden="true">
+            <svg class="icon"><use href="#i-robot"></use></svg>
+          </span>
+          <div>
+            <span class="response-label">Suggested robot reply</span>
+            <p id="responseText">Good to see you. Is there anything I can help you with?</p>
+          </div>
+        </div>
+
+        <p class="sr-only" id="demoStatus" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div class="demo-flow">
+      <div class="mini reveal">
+        <b>1. Input</b>
+        A pre-drawn face stands in for a camera frame.
+      </div>
+      <div class="mini reveal">
+        <b>2. Estimate</b>
+        The label and confidence come from a fixed table, not a model.
+      </div>
+      <div class="mini reveal">
+        <b>3. Reply</b>
+        Each expression maps to one deliberately gentle response.
+      </div>
+      <div class="mini reveal">
+        <b>4. Reality check</b>
+        Real systems are far less certain than this looks.
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="two-col">
+      <div class="content reveal">
+        <span class="eyebrow">Why simulate it?</span>
+        <h2>Because the honest version is <em>less impressive</em></h2>
+        <p>A real model outputs a spread of probabilities, and the top score is often only 40–60% — nowhere near as tidy as a demo panel. It can also be confidently wrong.</p>
+        <p>So this page shows the <strong>interface</strong> a real system would need: an explicit estimate, a visible confidence score, and a reply that leaves room for being mistaken. Presenting it any other way would teach the wrong lesson.</p>
+        <a class="btn" href="ethics.html">Why that matters <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+      </div>
+      <div class="figure-panel reveal" aria-hidden="true">
+        <span class="corner-tag">Uncertainty</span>
+        <svg class="icon"><use href="#i-shield"></use></svg>
+        <span class="figure-label">An estimate is not a diagnosis</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="callout reveal">
+      <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+      <p><b>Privacy note.</b> This page never requests a camera. If the project is later connected to a real camera, consent and on-device processing come first — a face is personal data, and a classroom is not a laboratory.</p>
+    </div>
+  </section>
+
+  <nav class="pager" aria-label="Page navigation">
+    <a href="technology.html">
+      <span>Previous</span>
+      <b>Technology</b>
+    </a>
+    <a class="next" href="applications.html">
+      <span>Next</span>
+      <b class="row">Applications<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></b>
+    </a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true"><svg class="icon"><use href="#i-robot"></use></svg></span>
+        Emotion<b>Bot</b>
+      </a>
+      <p>Emotion-aware robotics, explained responsibly. A school exhibition project about what expression recognition can and cannot tell us.</p>
+    </div>
+    <div class="footer-col">
+      <h2>Project</h2>
+      <a href="about.html">About</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="technology.html">Technology</a>
+      <a href="demo.html">Try the demo</a>
+    </div>
+    <div class="footer-col">
+      <h2>Responsibility</h2>
+      <a href="ethics.html">Ethics and privacy</a>
+      <a href="applications.html">Applications</a>
+      <a href="future.html">Future</a>
+      <a href="team.html">Team</a>
+    </div>
+    <div class="footer-col">
+      <h2>Project team</h2>
+      <address>Built by Naman Tripathi, Kushagra Gupta and Devansh Yadav.</address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span data-year>2026</span> EmotionBot</p>
+    <p>Simulated concept — not a real emotion detector.</p>
+    <p>Website made by Naman Tripathi</p>
+  </div>
+</footer>
+
+<button id="topBtn" class="top-btn" type="button" aria-label="Back to top">
+  <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+<script src="js/script.js"></script>
+<script src="js/demo.js"></script>
+</body>
+</html>
